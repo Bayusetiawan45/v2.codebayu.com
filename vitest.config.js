@@ -8,7 +8,8 @@ export default defineConfig({
     environment: 'jsdom',
     coverage: {
       provider: 'istanbul',
-      reporter: ['text', 'lcov', 'json-summary', 'json']
+      reporter: ['text', 'lcov', 'json-summary', 'json'],
+      exclude: ['hooks/**', 'common/libs/**']
     },
     alias: {
       '@/': './'

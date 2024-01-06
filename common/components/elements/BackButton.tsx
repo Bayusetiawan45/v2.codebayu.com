@@ -35,13 +35,13 @@ export default function BackButton({ url }: BackButtonProps) {
   return (
     <div className="w-fit">
       {url ? (
-        <Link href={url} passHref>
+        <Link data-testid="back-button-url" href={url} passHref>
           <div className={className}>
             <BackButtonChildComponent />
           </div>
         </Link>
       ) : (
-        <div className={className} onClick={handleOnClick}>
+        <div data-testid="back-button" className={className} onClick={handleOnClick}>
           <BackButtonChildComponent />
         </div>
       )}

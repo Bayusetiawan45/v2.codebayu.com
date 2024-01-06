@@ -57,6 +57,7 @@ export default function Badge(props: BadgeProps) {
   if (href)
     return (
       <Link
+        data-testid="badge-link"
         href={href}
         target={target}
         className={`font-medium text-center rounded-full ${chooseSize} ${variantColor}`}
@@ -64,5 +65,9 @@ export default function Badge(props: BadgeProps) {
         {children}
       </Link>
     )
-  return <span className={`font-medium text-center rounded-full ${chooseSize} ${variantColor}`}>{children}</span>
+  return (
+    <span data-testid="badge" className={`font-medium text-center rounded-full ${chooseSize} ${variantColor}`}>
+      {children}
+    </span>
+  )
 }

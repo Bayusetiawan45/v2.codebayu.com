@@ -22,6 +22,7 @@ export default function Embed() {
 
   return (
     <blockquote
+      data-testid="tiktok-embed"
       className="tiktok-embed"
       cite="https://www.tiktok.com/@codebayu.com"
       data-unique-id="codebayu.com"

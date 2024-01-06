@@ -26,7 +26,7 @@ const AnimateCounter = ({ total, ...rest }: AnimateCounterProps) => {
     return () => controls.stop()
   }, [total])
 
-  return <span {...rest} ref={countRef} />
+  return <span {...rest} ref={countRef} data-testid="counter" />
 }
 
 export default AnimateCounter
